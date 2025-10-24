@@ -6,7 +6,7 @@ document.getElementById("contactoForm").addEventListener("submit", async (e) => 
   resultado.innerText = "Enviando...";
 
   try {
-    const resp = await fetch("/api/contacto", {
+    const resp = await fetch("https://sitio-seguro-u1.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre, mensaje })
