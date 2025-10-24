@@ -1,7 +1,7 @@
-const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const dotenv = require("dotenv");
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -21,7 +21,9 @@ app.post("/", (req, res) => {
   res.json({ success: true, message: "Datos recibidos con éxito" });
 });
 
+// 👇 ESTA LÍNEA ES CRUCIAL
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
+
